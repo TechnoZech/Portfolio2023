@@ -208,3 +208,47 @@ body{
     width: 35px;
     
 }
+
+
+/* <============ About Me Section ============> */
+
+.aboutme_section{
+    height: 90vh;
+    width: 100%;
+    background-color: var(--background-color-one);
+}
+
+.aboutme_container{
+    height: 100%;
+    padding: 150px 0 150px 0;
+    margin: 0 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.aboutme_photo_div{
+    width: 35%;
+}
+
+.aboutme_photo{
+    width: 380px;
+    height: 310px;
+    border-radius: 20px;
+}
+
+.aboutme_small_heading{
+    font-size: 1.1rem;
+    color: var(--small-heading-color);
+    margin-bottom: 10px;
+}
+
+.aboutme_heading{
+    color: var(--big-heading-color);
+    margin-bottom: 10px;
+}
+
+.aboutme_para{
+    color: var(--para-text-color);
+}
