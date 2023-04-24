@@ -38,6 +38,9 @@
 	scroll-behavior: smooth;
     text-decoration: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background-color: var(--background-color-two);
