@@ -8,18 +8,26 @@
     --border-color: #1b1b1b;
     --background-color-tech: #fff;
     --btn-hover-color: #147efb;
+    --footer-text: #f9f9f9;
+    --icon-background-color: #fff;
+    --conact-i-heading: #2d2e32;
+    --footer-background: #1b1b1b;
 }
 
 .dark-theme{
     transition: 0.3s all ease-in;
     --background-color-one: #181120;
-	--background-color-two: #3A2D49;
-	--big-heading-color: #c385fd;
+	--background-color-two: #512e70;
+	--big-heading-color: #e3c6ff;
 	--small-heading-color: #BB86FC;
 	--para-text-color: #f5e8ff;
     --border-color: #c385fd;
     --background-color-tech: #3A2D49;
     --btn-hover-color: #f5e8ff;
+    --footer-text: #f9f9f9;
+    --icon-background-color: #3A2D49;
+    --conact-i-heading: #f9f9f9;
+    --footer-background: #512e70;
 }
 
 * {
@@ -251,7 +259,7 @@ body{
 }
 
 .aboutme_heading{
-    color: var(--big-heading-color);
+    color: var(--conact-i-heading);
     margin-bottom: 10px;
 }
 
@@ -275,7 +283,7 @@ body{
 }
 
 .portfolio_heading{
-    color: var(--big-heading-color);
+    color: var(--conact-i-heading);
     margin-bottom: 60px;
 
 }
@@ -391,6 +399,94 @@ body{
     transition: 0.3s all ease-in-out;
 }
 
-.fa-github{
+.github-i{
     font-size: 1.3rem;
+}
+
+/* <---------- Contact Section --------> */
+
+.contact_section{
+    background-color: var(--background-color-one);
+}
+.contact_container{
+    width: 64%;
+    padding: 100px 0 100px 0;
+    margin: 0 18%;
+}
+
+.contact_small_heading{
+    font-size: 1.1rem;
+    color: var(--small-heading-color);
+    margin-bottom: 10px;
+}
+
+.contact_heading{
+    color: var(--conact-i-heading);
+    margin-bottom: 60px;
+}
+
+.contact_div{
+    display: flex;
+    
+}
+.contact_card{
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.contact_icon{
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    background-color: var(--icon-background-color);
+    margin-right: 10px;
+}
+
+.contact_icon i{
+    font-size: 2rem;
+    color: var(--small-heading-color);
+    padding: 20px;
+}
+
+.contact_text{
+    color: var(--para-text-color);
+}
+.content_head{
+    color: var(--conact-i-heading);
+}
+
+/* <---------- Footer Section --------> */
+
+
+.footer_section{
+    background-color: var(--footer-background);
+}
+
+.footer_container{
+    width: 64%;
+    padding: 50px 0 50px 0;
+    margin: 0 18%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copyright{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--footer-text);
+}
+
+.footer-i{
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: var(--footer-text) !important;
+}
+
+.footer-i:hover{
+    transform: scale(1.2);
+    transition: 0.2s all ease-in-out;
 }
