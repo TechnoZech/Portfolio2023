@@ -108,6 +108,10 @@ body{
     font-weight: 600;
     color: var(--big-heading-color);
 }
+.nav_link:hover{
+    transition: all 0.2s ease-in-out;
+    color: var(--btn-hover-color);
+}
 
 /* <---------- Theme --------> */
 .theme{
@@ -456,6 +460,10 @@ body{
 
 .contact_text{
     color: var(--para-text-color);
+}
+
+.contact_text:hover{
+    color: var(--btn-hover-color);
 }
 .content_head{
     color: var(--conact-i-heading);
