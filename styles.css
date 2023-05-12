@@ -311,38 +311,36 @@ body{
 
 /* ------------- */
 
+
+/* .portfolio_photo_div {
+    width: 50%;
+    background: url(./assets/greenvpn.png);
+    background-size: cover;
+    background-position: top;
+    height: 400px;
+    transition: 10s ease-in-out;
+}
+.portfolio_photo_div:hover{
+   background-position: bottom;
+} */
+
+
 .portfolio_photo_div {
-	display: block;
-	width: 100%;
-	height: 90%;
-	overflow: hidden;
-	position: relative;
-	border-radius: 1px;
-	margin: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    width: 60%;
+    height: 400px;
+    padding: 20px;
+    
 }
-.portfolio_photo_div img {
-	bottom: -750px;
-	width: 100%;
-	height: auto;
-	position: absolute;
-	z-index: 0;
-    margin:0;
-    padding:0;
-	-webkit-transition: top 10s;
-	-moz-transition: top 10s;
-	-ms-transition: top 10s;
-	-o-transition: top 10s;
-	transition: bottom 10s;
+.portfolio_photo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: 10s ease-in-out;
+    border-radius: 10px;
 }
-.portfolio_photo_div:hover  img {
-  bottom: 0;
-  -webkit-transition: all 10s;
-  -moz-transition: all 10s;
-  -ms-transition: all 10s;
-  -o-transition: all 10s;
-  transition: all 10s;
+.portfolio_photo:hover{
+    object-position: bottom;
 }
 
 
@@ -352,7 +350,7 @@ body{
 .portfolio_content_div{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 40%;
     height: 90%;
     padding: 20px;
     justify-content: space-between;
