@@ -1,9 +1,14 @@
 //selectors
 let theme = document.querySelector(".theme");
+let openNavIcon = document.querySelector(".mobile-menu");
+let closeNavIcon = document.querySelector(".fa-xmark");
+let mobileNav = document.querySelector(".m_nav_section");
 
 
 //event listeners
 theme.addEventListener("click", chnageTheme);
+openNavIcon.addEventListener("click", mobileNavOpen);
+closeNavIcon.addEventListener("click", mobileNavClose);
 
 //Functions
 function chnageTheme(e){
@@ -19,4 +24,12 @@ function chnageTheme(e){
         theme.classList.add("fa-moon");
     }
     document.body.classList.toggle("dark-theme");
+}
+
+function mobileNavOpen(e){
+    mobileNav.classList.add("active_mob_nav");
+}
+
+function mobileNavClose(e){
+    mobileNav.classList.remove("active_mob_nav");
 }

@@ -44,6 +44,7 @@ html{
 
 body{
     background-color: var(--background-color-two);
+    
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -113,6 +114,90 @@ body{
     color: var(--btn-hover-color);
 }
 
+.mobile-menu{
+    font-size: 1.4rem;
+    display: none !important;
+    color: var(--big-heading-color);
+}
+
+.mobile-menu:hover{
+    color: var(--btn-hover-color);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.m_nav_section{
+    width: 100%;
+    height: 100vh;
+    z-index: 9900;
+    display: none;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* transition: all 1s ease-in-out; */
+    animation: 0.5s forwards slide;
+    background-color: var(--background-color-one);
+}
+
+
+
+@keyframes slide {
+    from {
+      left: -100%;
+    } to {
+      left: 0;
+    }
+}
+
+.m_nav_container{
+    height: 100%;
+    width: 100%;
+}
+
+
+.m_nav_links_div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.m_nav_link{
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--big-heading-color);
+}
+
+.m_nav_link:hover{
+    transition: all 0.2s ease-in-out;
+    color: var(--btn-hover-color);
+}
+
+.fa-xmark{
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--big-heading-color);
+}
+
+.fa-xmark:hover{
+    color: var(--btn-hover-color);
+}
+
+.active_mob_nav{
+    display: flex !important;
+}
+
 /* <---------- Theme --------> */
 .theme{
     font-size: 1.4rem;
@@ -120,352 +205,763 @@ body{
     cursor: pointer;
 }
 
-/* <---------- Hero Section --------> */
+/* <---------- Navbar Mobile --------> */
 
-.hero_section{
-    height: 100vh;
-    width: 100%;
-}
+@media only screen and (max-width: 1100px) {
 
-.hero_container{
-    padding: 150px 0 100px 0;
-    margin: 0 18%;
-}
-
-.hero_text_div{
-    width: 50%;
-}
-
-.hero_text_img_wrap{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 100px;
-}
-
-.hero_h1{
-    font-size: 3.5rem;
-    color: var(--big-heading-color);
-    margin-bottom: 20px;
-}
-
-.hero_para{
-    font-size: 1.1rem;
-    color: var(--para-text-color);
-    margin-bottom: 20px;
-}
-
-.social_icon{
-    font-size: 2rem;
-    color: var(--big-heading-color);
-    margin-right: 15px;
-    cursor: pointer;
-}
-
-.social_icon:hover{
-    transition: 0.3s all ease-in-out;
-    color: var(--small-heading-color);
-}
-
-.hero_img_div {
-	-webkit-animation: morph 8s ease-in-out infinite;
-	animation: morph 8s ease-in-out infinite;
-	background-image: url(./assets/hero.jpg);
-	background-position: 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border: 3px solid var(--border-color);
-	border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-	height: 35rem;
-	position: relative;
-	transition: all 1s ease-in-out;
-	height: 22rem;
-	width: 22rem;
-}
-
-@keyframes morph {
-	0% {
-		border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-	}
-
-	50% {
-		border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-	}
-
-	to {
-		border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-	}
-}
-
-
-.tech_stack_container{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    margin-top: 80px;
-}
-
-.stack_heading{
-    font-weight: 500;
-    font-size: 1.2rem;
-    color: var(--para-text-color);
-}
-
-.techstack_logo_div{
-    height: 70px;
-    width: 70px;
-    cursor: pointer;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 10px rgba(0,0,0,.09);
-    background-color: var(--background-color-one);
+    .nav_section {
+        width: 100%;
+        height: 80px;
+        background-color: var(--background-color-one);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.09);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
     
+    .nav_container {
+        width: 100%;
+        height: auto;
+        padding: 25px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
-.techstack_logo{
-    height: 35px;
-    width: 35px;
+
+/* <---------- Hero Section PC --------> */
+
+@media only screen and (min-width: 600px) {
+    .hero_section{
+        height: 100vh;
+        width: 100%;
+    }
     
-}
-
-
-/* <============ About Me Section ============> */
-
-.aboutme_section{
-    height: 90vh;
-    width: 100%;
-    background-color: var(--background-color-one);
-}
-
-.aboutme_container{
-    height: 100%;
-    padding: 150px 0 150px 0;
-    margin: 0 18%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-}
-
-.aboutme_photo_div{
-    width: 35%;
-}
-
-.aboutme_photo{
-    width: 380px;
-    height: 310px;
-    border-radius: 20px;
-}
-
-.aboutme_small_heading{
-    font-size: 1.1rem;
-    color: var(--small-heading-color);
-    margin-bottom: 10px;
-}
-
-.aboutme_heading{
-    color: var(--conact-i-heading);
-    margin-bottom: 10px;
-}
-
-.aboutme_para{
-    color: var(--para-text-color);
-}
-
-/* <---------- Portfolio Section --------> */
-
-
-.portfolio_container{
-    width: 64%;
-    padding: 150px 0 100px 0;
-    margin: 0 18%;
-}
-
-.portfolio_small_heading{
-    font-size: 1.1rem;
-    color: var(--small-heading-color);
-    margin-bottom: 10px;
-}
-
-.portfolio_heading{
-    color: var(--conact-i-heading);
-    margin-bottom: 60px;
-
-}
-
-.portfolio_card{
-    height: 400px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 20px;
-    background-color: var(--background-color-one);
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
-    margin-bottom: 50px;
-}
-
-
-
-/* ------------- */
-
-
-/* .portfolio_photo_div {
-    width: 50%;
-    background: url(./assets/greenvpn.png);
-    background-size: cover;
-    background-position: top;
-    height: 400px;
-    transition: 10s ease-in-out;
-}
-.portfolio_photo_div:hover{
-   background-position: bottom;
-} */
-
-
-.portfolio_photo_div {
-    width: 60%;
-    height: 400px;
-    padding: 20px;
+    .hero_container{
+        padding: 150px 0 100px 0;
+        margin: 0 18%;
+    }
     
-}
-.portfolio_photo{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-    transition: 10s ease-in-out;
-    border-radius: 10px;
-}
-.portfolio_photo:hover{
-    object-position: bottom;
-}
-
-
-
-/* ------------------------ */
-
-.portfolio_content_div{
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    height: 90%;
-    padding: 20px;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 40px;
-    margin-left: 40px;
-}
-
-.portfolio_card_heading{
-    font-size: 1.1rem;
-    color: var(--big-heading-color);
-}
-
-.portfolio_card_description{
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--para-text-color);
-    justify-content: center;
-    text-align: center;
-}
-
-.portfolio_card_tech_div{
-    display: flex;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.portfolio_tech{
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 6px 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
-    background-color: var(--background-color-tech);
-    color: var(--big-heading-color);
-    border-radius: 3px;
-}
-
-.portfolio_card_btn_div{
-    display: flex;
-    gap: 30px;
-    font-size: 1.1rem;
-}
-
-.portfolio_card_btn_div a{
-    color: var(--big-heading-color);
-    font-weight: 500;
-}
-
-.portfolio_card_btn:hover{
-    color: var(--btn-hover-color);
-    transition: 0.3s all ease-in-out;
-}
-
-.github-i{
-    font-size: 1.3rem;
-}
-
-/* <---------- Contact Section --------> */
-
-.contact_section{
-    background-color: var(--background-color-one);
-}
-.contact_container{
-    width: 64%;
-    padding: 100px 0 100px 0;
-    margin: 0 18%;
-}
-
-.contact_small_heading{
-    font-size: 1.1rem;
-    color: var(--small-heading-color);
-    margin-bottom: 10px;
-}
-
-.contact_heading{
-    color: var(--conact-i-heading);
-    margin-bottom: 60px;
-}
-
-.contact_div{
-    display: flex;
+    .hero_text_div{
+        width: 50%;
+    }
     
-}
-.contact_card{
-    display: flex;
-    align-items: center;
-    margin-right: 60px;
+    .hero_text_img_wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 100px;
+    }
+    
+    .hero_h1{
+        font-size: 3.5rem;
+        color: var(--big-heading-color);
+        margin-bottom: 20px;
+    }
+    
+    .hero_para{
+        font-size: 1.1rem;
+        color: var(--para-text-color);
+        margin-bottom: 20px;
+    }
+    
+    .social_icon{
+        font-size: 2rem;
+        color: var(--big-heading-color);
+        margin-right: 15px;
+        cursor: pointer;
+    }
+    
+    .social_icon:hover{
+        transition: 0.3s all ease-in-out;
+        color: var(--small-heading-color);
+    }
+    
+    .hero_img_div {
+        -webkit-animation: morph 8s ease-in-out infinite;
+        animation: morph 8s ease-in-out infinite;
+        background-image: url(./assets/hero.jpg);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 3px solid var(--border-color);
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        height: 35rem;
+        position: relative;
+        transition: all 1s ease-in-out;
+        height: 22rem;
+        width: 22rem;
+    }
+    
+    @keyframes morph {
+        0% {
+            border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        }
+    
+        50% {
+            border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+        }
+    
+        to {
+            border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        }
+    }
+    
+    
+    .tech_stack_container{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    .tech_stack_three_container{
+        display: flex;
+        gap: 20px;
+    }
+
+    .tech_stack_three_wrap{
+        display: flex;
+        gap: 20px;
+    }
+    
+    .stack_heading{
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: var(--para-text-color);
+    }
+    
+    .techstack_logo_div{
+        height: 70px;
+        width: 70px;
+        cursor: pointer;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 10px rgba(0,0,0,.09);
+        background-color: var(--background-color-one);
+        
+    }
+    
+    .techstack_logo{
+        height: 35px;
+        width: 35px;
+        
+    }
 }
 
-.contact_icon{
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
-    background-color: var(--icon-background-color);
-    margin-right: 10px;
+/* <---------- Hero Section mobile --------> */
+
+@media only screen and (max-width: 1100px) {
+    .hero_section{
+        /* height: 100vh; */
+        width: 100%;
+    }
+    
+    .hero_container{
+        padding: 130px 0 100px 0;
+        margin: 0 3%;
+    }
+    
+    .hero_text_div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero_text_img_wrap{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+    }
+    
+    .hero_h1{
+        text-align: center;
+        font-size: 2.2rem;
+        color: var(--big-heading-color);
+        margin-bottom: 20px;
+    }
+    
+    .hero_para{
+        font-size: 1.1rem;
+        text-align: center;
+        color: var(--para-text-color);
+        margin-bottom: 20px;
+    }
+    
+    .social_icon{
+        font-size: 2rem;
+        color: var(--big-heading-color);
+        margin-right: 15px;
+        cursor: pointer;
+    }
+    
+    .social_icon:hover{
+        transition: 0.3s all ease-in-out;
+        color: var(--small-heading-color);
+    }
+    
+    .hero_img_div {
+        -webkit-animation: morph 8s ease-in-out infinite;
+        animation: morph 8s ease-in-out infinite;
+        background-image: url(./assets/hero.jpg);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 3px solid var(--border-color);
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        height: 35rem;
+        position: relative;
+        transition: all 1s ease-in-out;
+        height: 16rem;
+        width: 16rem;
+    }
+    
+    @keyframes morph {
+        0% {
+            border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        }
+    
+        50% {
+            border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+        }
+    
+        to {
+            border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        }
+    }
+    
+    
+    .tech_stack_container{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .tech_stack_three_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .tech_stack_three_wrap{
+        display: flex;
+        gap: 20px;
+    }
+    
+    .stack_heading{
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: var(--para-text-color);
+    }
+    
+    .techstack_logo_div{
+        height: 70px;
+        width: 70px;
+        cursor: pointer;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 10px rgba(0,0,0,.09);
+        background-color: var(--background-color-one);
+        
+    }
+    
+    .techstack_logo{
+        height: 35px;
+        width: 35px;
+    }
+  }
+
+/* <============ About Me Section PC============> */
+
+
+@media only screen and (min-width: 600px) {
+    .aboutme_section{
+        height: 90vh;
+        width: 100%;
+        background-color: var(--background-color-one);
+    }
+    
+    .aboutme_container{
+        height: 100%;
+        padding: 150px 0 150px 0;
+        margin: 0 18%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+    
+    .aboutme_photo_div{
+        width: 35%;
+    }
+    
+    .aboutme_photo{
+        width: 380px;
+        height: 310px;
+        border-radius: 20px;
+    }
+    
+    .aboutme_small_heading{
+        font-size: 1.1rem;
+        color: var(--small-heading-color);
+        margin-bottom: 10px;
+    }
+    
+    .aboutme_heading{
+        color: var(--conact-i-heading);
+        margin-bottom: 10px;
+    }
+    
+    .aboutme_para{
+        color: var(--para-text-color);
+    }
+
 }
 
-.contact_icon i{
-    font-size: 2rem;
-    color: var(--small-heading-color);
-    padding: 20px;
+/* <============ About Me Section mobile============> */
+@media only screen and (max-width: 1100px) {
+    .aboutme_section{
+        width: 100%;
+        background-color: var(--background-color-one);
+    }
+    
+    .aboutme_container{
+        /* height: 100%; */
+        padding: 100px 0 100px 0;
+        margin: 0 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 50px;
+    }
+    
+    .aboutme_photo_div{
+        width: 90%;
+    }
+    
+    .aboutme_photo{
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+    
+    .aboutme_small_heading{
+        font-size: 1.1rem;
+        color: var(--small-heading-color);
+        margin-bottom: 10px;
+    }
+    
+    .aboutme_heading{
+        color: var(--conact-i-heading);
+        margin-bottom: 10px;
+    }
+    
+    .aboutme_para{
+        color: var(--para-text-color);
+    }
+
 }
 
-.contact_text{
-    color: var(--para-text-color);
+
+/* <---------- Portfolio Section PC--------> */
+@media only screen and (min-width: 600px) {
+    .portfolio_container{
+        width: 64%;
+        padding: 150px 0 100px 0;
+        margin: 0 18%;
+    }
+    
+    .portfolio_small_heading{
+        font-size: 1.1rem;
+        color: var(--small-heading-color);
+        margin-bottom: 10px;
+    }
+    
+    .portfolio_heading{
+        color: var(--conact-i-heading);
+        margin-bottom: 60px;
+    
+    }
+    
+    .portfolio_card{
+        height: 400px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 20px;
+        background-color: var(--background-color-one);
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        margin-bottom: 50px;
+    }
+    
+    
+    
+    /* ------------- */
+    
+    .portfolio_photo_div {
+        width: 60%;
+        height: 400px;
+        padding: 20px;
+        
+    }
+    .portfolio_photo{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        transition: 9s ease-in-out;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,.3);
+    }
+    .portfolio_photo:hover{
+        object-position: bottom;
+    }
+    
+    
+    
+    /* ------------------------ */
+    
+    .portfolio_content_div{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        height: 90%;
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+    
+    .portfolio_card_heading{
+        font-size: 1.1rem;
+        color: var(--big-heading-color);
+    }
+    
+    .portfolio_card_description{
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--para-text-color);
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .portfolio_card_tech_div{
+        display: flex;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .portfolio_tech{
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 6px 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        background-color: var(--background-color-tech);
+        color: var(--big-heading-color);
+        border-radius: 3px;
+    }
+    
+    .portfolio_card_btn_div{
+        display: flex;
+        gap: 30px;
+        font-size: 1.1rem;
+    }
+    
+    .portfolio_card_btn_div a{
+        color: var(--big-heading-color);
+        font-weight: 500;
+    }
+    
+    .portfolio_card_btn:hover{
+        color: var(--btn-hover-color);
+        transition: 0.3s all ease-in-out;
+    }
+    
+    .github-i{
+        font-size: 1.3rem;
+    }
+}
+/* <---------- Portfolio Section Mobile--------> */
+@media only screen and (max-width: 1100px) {
+    .portfolio_container{
+        /* width: 100%; */
+        padding: 100px 0 100px 0;
+        margin: 0 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .portfolio_small_heading{
+        font-size: 1.1rem;
+        color: var(--small-heading-color);
+        margin-bottom: 10px;
+    }
+    
+    .portfolio_heading{
+        color: var(--conact-i-heading);
+        margin-bottom: 60px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .portfolio_card{
+        /* height: 400px; */
+        /* width: 100%;  */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        background-color: var(--background-color-one);
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        margin-bottom: 50px;
+    }
+    
+    
+    
+    /* ------------- */
+    
+    .portfolio_photo_div {
+        width: 100%;
+        height: 400px;
+        padding: 20px;
+        
+    }
+    .portfolio_photo{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        transition: 9s ease-in-out;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,.3);
+    }
+    .portfolio_photo:hover{
+        object-position: bottom;
+    }
+    
+    /* ------------------------ */
+    
+    .portfolio_content_div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+    
+    .portfolio_card_heading{
+        font-size: 1.1rem;
+        color: var(--big-heading-color);
+    }
+    
+    .portfolio_card_description{
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--para-text-color);
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .portfolio_card_tech_div{
+        display: flex;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .portfolio_tech{
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 6px 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        background-color: var(--background-color-tech);
+        color: var(--big-heading-color);
+        border-radius: 3px;
+    }
+    
+    .portfolio_card_btn_div{
+        display: flex;
+        gap: 30px;
+        font-size: 1.1rem;
+    }
+    
+    .portfolio_card_btn_div a{
+        color: var(--big-heading-color);
+        font-weight: 500;
+    }
+    
+    .portfolio_card_btn:hover{
+        color: var(--btn-hover-color);
+        transition: 0.3s all ease-in-out;
+    }
+    
+    .github-i{
+        font-size: 1.3rem;
+    }
 }
 
-.contact_text:hover{
-    color: var(--btn-hover-color);
+
+
+/* <---------- Contact Section PC--------> */
+@media only screen and (min-width: 600px) {
+    .contact_section{
+        background-color: var(--background-color-one);
+    }
+    .contact_container{
+        width: 64%;
+        padding: 100px 0 100px 0;
+        margin: 0 18%;
+    }
+    
+    .contact_small_heading{
+        font-size: 1.1rem;
+        color: var(--small-heading-color);
+        margin-bottom: 10px;
+    }
+    
+    .contact_heading{
+        color: var(--conact-i-heading);
+        margin-bottom: 60px;
+    }
+    
+    .contact_div{
+        display: flex;
+        
+    }
+    .contact_card{
+        display: flex;
+        align-items: center;
+        margin-right: 60px;
+    }
+    
+    .contact_icon{
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        background-color: var(--icon-background-color);
+        margin-right: 10px;
+    }
+    
+    .contact_icon i{
+        font-size: 2rem;
+        color: var(--small-heading-color);
+        padding: 20px;
+    }
+    
+    .contact_text{
+        color: var(--para-text-color);
+    }
+    
+    .contact_text:hover{
+        color: var(--btn-hover-color);
+    }
+    .content_head{
+        color: var(--conact-i-heading);
+    }
 }
-.content_head{
-    color: var(--conact-i-heading);
+/* <---------- Contact Section mobile--------> */
+@media only screen and (max-width: 1100px) {
+    .contact_section{
+        background-color: var(--background-color-one);
+    }
+    .contact_container{
+        padding: 100px 0 100px 0;
+        margin: 0 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .contact_small_heading{
+        font-size: 1.1rem;
+        color: var(--small-heading-color);
+        margin-bottom: 10px;
+    }
+    
+    .contact_heading{
+        color: var(--conact-i-heading);
+        margin-bottom: 60px;
+    }
+    
+    .contact_div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        
+    }
+    .contact_card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .contact_icon{
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        background-color: var(--icon-background-color);
+
+    }
+    
+    .contact_icon i{
+        font-size: 2rem;
+        color: var(--small-heading-color);
+        padding: 20px;
+    }
+
+    .contact_content{
+        margin: 15px 0;
+    }
+
+   
+    
+    .contact_text{
+        color: var(--para-text-color);
+    }
+    
+    .contact_text:hover{
+        color: var(--btn-hover-color);
+    }
+    .content_head{
+        text-align: center;
+        color: var(--conact-i-heading);
+    }
 }
+
+
 
 /* <---------- Footer Section --------> */
 
@@ -498,4 +994,21 @@ body{
 .footer-i:hover{
     transform: scale(1.2);
     transition: 0.2s all ease-in-out;
+}
+
+
+
+
+/* <<<========= 900 width =======>>> */
+
+@media (max-width: 900px) {
+
+    .nav_link{
+        display: none;
+    }
+
+    .mobile-menu{
+        font-size: 1.4rem;
+        display: flex !important;
+    }
 }
