@@ -233,7 +233,7 @@ body{
 
 /* <---------- Hero Section PC --------> */
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1101px) {
     .hero_section{
         height: 100vh;
         width: 100%;
@@ -282,7 +282,7 @@ body{
     .hero_img_div {
         -webkit-animation: morph 8s ease-in-out infinite;
         animation: morph 8s ease-in-out infinite;
-        background-image: url(./assets/hero.jpg);
+        background-image: url(./assets/hero_img2.jpeg);
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -312,7 +312,7 @@ body{
     
     .tech_stack_container{
         display: flex;
-        gap: 20px;
+        gap: 50px;
         align-items: center;
         margin-top: 80px;
     }
@@ -328,9 +328,11 @@ body{
     }
     
     .stack_heading{
+        padding: 0 20px 0 0;
         font-weight: 500;
         font-size: 1.2rem;
         color: var(--para-text-color);
+        border-right: solid var(--para-text-color) 2px;
     }
     
     .techstack_logo_div{
@@ -395,11 +397,15 @@ body{
         color: var(--para-text-color);
         margin-bottom: 20px;
     }
+
+    .social_icons{
+        display: flex;
+        gap: 20px;
+    }
     
     .social_icon{
         font-size: 2rem;
         color: var(--big-heading-color);
-        margin-right: 15px;
         cursor: pointer;
     }
     
@@ -411,7 +417,7 @@ body{
     .hero_img_div {
         -webkit-animation: morph 8s ease-in-out infinite;
         animation: morph 8s ease-in-out infinite;
-        background-image: url(./assets/hero.jpg);
+        background-image: url(./assets/hero_img2.jpeg);
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -461,9 +467,12 @@ body{
     }
     
     .stack_heading{
+        padding: 0 0 7px 0;
         font-weight: 500;
         font-size: 1.2rem;
         color: var(--para-text-color);
+        border-bottom: solid var(--para-text-color) 2px;
+        margin-bottom: 10px;
     }
     
     .techstack_logo_div{
@@ -487,8 +496,7 @@ body{
 
 /* <============ About Me Section PC============> */
 
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1201px) {
     .aboutme_section{
         height: 90vh;
         width: 100%;
@@ -530,6 +538,36 @@ body{
         color: var(--para-text-color);
     }
 
+}
+
+/* <============ About Me Section Tablet============> */
+
+@media only screen and (min-width: 1101px) {
+    .aboutme_section{
+        height: 90vh;
+        background-color: var(--background-color-one);
+    }
+    
+    .aboutme_container{
+        height: 100%;
+        padding: 150px 0 150px 0;
+        margin: 0 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+    
+    .aboutme_photo_div{
+        width: 35%;
+    }
+    
+    .aboutme_photo{
+        width: 380px;
+        height: 310px;
+        border-radius: 20px;
+    }
+    
 }
 
 /* <============ About Me Section mobile============> */
@@ -580,7 +618,7 @@ body{
 
 
 /* <---------- Portfolio Section PC--------> */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1101px) {
     .portfolio_container{
         width: 64%;
         padding: 150px 0 100px 0;
@@ -609,6 +647,10 @@ body{
         background-color: var(--background-color-one);
         box-shadow: 0 0 10px rgba(0,0,0,.1);
         margin-bottom: 50px;
+    }
+
+    .reverse{
+        flex-direction: row-reverse;
     }
     
     
@@ -737,7 +779,9 @@ body{
         margin-bottom: 50px;
     }
     
-    
+    .reverse{
+        flex-direction: column-reverse;
+    }
     
     /* ------------- */
     
@@ -775,6 +819,7 @@ body{
     }
     
     .portfolio_card_heading{
+        margin-bottom: 20px;
         font-size: 1.1rem;
         color: var(--big-heading-color);
     }
@@ -828,7 +873,7 @@ body{
 
 
 /* <---------- Contact Section PC--------> */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1101px) {
     .contact_section{
         background-color: var(--background-color-one);
     }
@@ -917,7 +962,6 @@ body{
         align-items: center;
         justify-content: center;
         gap: 30px;
-        
     }
     .contact_card{
         display: flex;
@@ -963,43 +1007,80 @@ body{
 
 
 
-/* <---------- Footer Section --------> */
-
-
-.footer_section{
-    background-color: var(--footer-background);
+/* <---------- Footer Section PC--------> */
+@media only screen and (min-width: 1101px) {
+    .footer_section{
+        background-color: var(--footer-background);
+    }
+    
+    .footer_container{
+        width: 64%;
+        padding: 50px 0 50px 0;
+        margin: 0 18%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .copyright{
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--footer-text);
+    }
+    
+    .footer-i{
+        font-size: 1.5rem;
+        margin-right: 10px;
+        color: var(--footer-text) !important;
+    }
+    
+    .footer-i:hover{
+        transform: scale(1.2);
+        transition: 0.2s all ease-in-out;
+    }
+}
+/* <---------- Footer Section Mobile--------> */
+@media only screen and (max-width: 1100px) {
+    .footer_section{
+        background-color: var(--footer-background);
+    }
+    
+    .footer_container{
+        padding: 50px 0;
+        margin: 0 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .copyright{
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--footer-text);
+    }
+    
+    .footer-i{
+        font-size: 1.5rem;
+        margin-right: 10px;
+        color: var(--footer-text) !important;
+    }
+    
+    .footer-i:hover{
+        transform: scale(1.2);
+        transition: 0.2s all ease-in-out;
+    }
 }
 
-.footer_container{
-    width: 64%;
-    padding: 50px 0 50px 0;
-    margin: 0 18%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.copyright{
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--footer-text);
-}
-
-.footer-i{
-    font-size: 1.5rem;
-    margin-right: 10px;
-    color: var(--footer-text) !important;
-}
-
-.footer-i:hover{
-    transform: scale(1.2);
-    transition: 0.2s all ease-in-out;
-}
 
 
 
 
-/* <<<========= 900 width =======>>> */
+
+
+/* <<<=========Navbar 900 width =======>>> */
 
 @media (max-width: 900px) {
 
