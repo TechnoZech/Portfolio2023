@@ -760,15 +760,14 @@ body{
     }
     
     .portfolio_heading{
+        text-align: center;
         color: var(--conact-i-heading);
         margin-bottom: 60px;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 2%;
+        margin-right: 2%;
     }
     
     .portfolio_card{
-        /* height: 400px; */
-        /* width: 100%;  */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -867,6 +866,10 @@ body{
     
     .github-i{
         font-size: 1.3rem;
+    }
+
+    .reverse{
+        flex-direction: column;
     }
 }
 
