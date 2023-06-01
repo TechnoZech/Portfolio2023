@@ -132,25 +132,14 @@ body{
     width: 100vw;
     height: 100%;
     z-index: 9900;
-    display: none;
     position: fixed;
     top: 0;
+    left: -100%;
     text-align: center;
     align-items: center;
     justify-content: center;
-    /* transition: all 1s ease-in-out; */
-    animation: 0.5s forwards slide;
+    transition: all 0.5s ease-in-out !important;
     background-color: var(--background-color-one);
-}
-
-
-
-@keyframes slide {
-    from {
-      left: -100%;
-    } to {
-      left: 0;
-    }
 }
 
 .m_nav_container{
@@ -198,6 +187,7 @@ body{
 
 .active_mob_nav{
     display: flex !important;
+    left: 0;
 }
 
 /* <---------- Theme --------> */
@@ -293,7 +283,7 @@ body{
     .hero_img_div {
         -webkit-animation: morph 8s ease-in-out infinite;
         animation: morph 8s ease-in-out infinite;
-        background-image: url(./assets/hero.jpg);
+        background-image: url(./assets/hero_img2.jpeg);
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -429,7 +419,7 @@ body{
     .hero_img_div {
         -webkit-animation: morph 8s ease-in-out infinite;
         animation: morph 8s ease-in-out infinite;
-        background-image: url(./assets/hero.jpg);
+        background-image: url(./assets/hero_img2.jpeg);
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: cover;

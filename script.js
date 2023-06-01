@@ -10,7 +10,7 @@ let mobileNavLinks = document.querySelectorAll(".m_nav_link");
 theme.addEventListener("click", chnageTheme);
 openNavIcon.addEventListener("click", mobileNavOpen);
 closeNavIcon.addEventListener("click", mobileNavClose);
-for (let i = 0; i < mobileNavLinks.length; i++) {
+for (let i = 0; i < mobileNavLinks.length; i++) { //added event listners to all mobile navlinks to close on click
     mobileNavLinks[i].addEventListener("click", mobileNavClose);
 }
 
@@ -36,4 +36,5 @@ function mobileNavOpen(e){
 
 function mobileNavClose(e){
     mobileNav.classList.remove("active_mob_nav");
+
 }
