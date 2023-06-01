@@ -3,12 +3,16 @@ let theme = document.querySelector(".theme");
 let openNavIcon = document.querySelector(".mobile-menu");
 let closeNavIcon = document.querySelector(".fa-xmark");
 let mobileNav = document.querySelector(".m_nav_section");
+let mobileNavLinks = document.querySelectorAll(".m_nav_link");
 
 
 //event listeners
 theme.addEventListener("click", chnageTheme);
 openNavIcon.addEventListener("click", mobileNavOpen);
 closeNavIcon.addEventListener("click", mobileNavClose);
+for (let i = 0; i < mobileNavLinks.length; i++) {
+    mobileNavLinks[i].addEventListener("click", mobileNavClose);
+}
 
 //Functions
 function chnageTheme(e){

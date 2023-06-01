@@ -133,7 +133,7 @@ body{
     height: 100%;
     z-index: 9900;
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     text-align: center;
     align-items: center;
@@ -293,7 +293,7 @@ body{
     .hero_img_div {
         -webkit-animation: morph 8s ease-in-out infinite;
         animation: morph 8s ease-in-out infinite;
-        background-image: url(./assets/hero_img2.jpeg);
+        background-image: url(./assets/hero.jpg);
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -372,6 +372,7 @@ body{
     .hero_section{
         /* height: 100vh; */
         width: 100%;
+        position: relative;
     }
     
     .hero_container{
@@ -428,7 +429,7 @@ body{
     .hero_img_div {
         -webkit-animation: morph 8s ease-in-out infinite;
         animation: morph 8s ease-in-out infinite;
-        background-image: url(./assets/hero_img2.jpeg);
+        background-image: url(./assets/hero.jpg);
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: cover;
