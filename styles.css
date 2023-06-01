@@ -283,7 +283,7 @@ body{
     .hero_img_div {
         -webkit-animation: morph 8s ease-in-out infinite;
         animation: morph 8s ease-in-out infinite;
-        background-image: url(./assets/hero_img2.jpeg);
+        background-image: url(./assets/hero_img.jpg);
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -419,7 +419,7 @@ body{
     .hero_img_div {
         -webkit-animation: morph 8s ease-in-out infinite;
         animation: morph 8s ease-in-out infinite;
-        background-image: url(./assets/hero_img2.jpeg);
+        background-image: url(./assets/hero_img.jpg);
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1097,3 +1097,15 @@ body{
 }
 
 
+/* =========================================== */
+.hidden{
+    opacity: 0;
+    /* filter: blur(5px); */
+    transform: translateY(-10%);
+    transition: all 1s;
+}
+.show {
+    opacity: 1;
+    /* filter: blur(0); */
+    transform: translateY(0);
+}
