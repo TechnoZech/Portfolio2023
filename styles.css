@@ -267,7 +267,10 @@ body{
         color: var(--para-text-color);
         margin-bottom: 20px;
     }
-    
+    .social_icons{
+        display: flex;
+        align-items: center;
+    }
     .social_icon{
         font-size: 2rem;
         color: var(--big-heading-color);
@@ -278,6 +281,21 @@ body{
     .social_icon:hover{
         transition: 0.3s all ease-in-out;
         color: var(--small-heading-color);
+    }
+
+    .resume{
+        font-weight: 500;
+        padding: 5px 15px;
+        border-radius: 25px;
+        font-size: 1rem;
+        color: var(--background-color-two);
+        background: var(--big-heading-color);
+        cursor: pointer;
+    }
+
+    .resume:hover{
+        transition: 0.3s all ease-in-out;
+        background: var(--small-heading-color);
     }
     
     .hero_img_div {
@@ -414,6 +432,21 @@ body{
     .social_icon:hover{
         transition: 0.3s all ease-in-out;
         color: var(--small-heading-color);
+    }
+
+    .resume{
+        font-weight: 500;
+        padding: 5px 15px;
+        border-radius: 25px;
+        font-size: 1rem;
+        color: var(--background-color-two);
+        background: var(--big-heading-color);
+        cursor: pointer;
+    }
+
+    .resume:hover{
+        transition: 0.3s all ease-in-out;
+        background: var(--small-heading-color);
     }
     
     .hero_img_div {
