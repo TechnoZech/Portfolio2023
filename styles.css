@@ -737,7 +737,7 @@ body{
         flex-direction: column;
         width: 40%;
         height: 90%;
-        padding: 20px;
+        padding: 20px 0;
         justify-content: space-between;
         align-items: center;
         margin-right: 40px;
@@ -750,15 +750,17 @@ body{
     }
     
     .portfolio_card_description{
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 500;
         color: var(--para-text-color);
         justify-content: center;
-        text-align: center;
+        text-align: justify;
     }
     
     .portfolio_card_tech_div{
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 10px;
         margin-bottom: 30px;
     }
