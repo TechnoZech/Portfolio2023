@@ -822,6 +822,7 @@ body{
     }
     
     .portfolio_card{
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -887,7 +888,9 @@ body{
     }
     
     .portfolio_card_tech_div{
+        flex-wrap: wrap;
         display: flex;
+        justify-content: center;
         gap: 10px;
         margin-bottom: 30px;
     }
